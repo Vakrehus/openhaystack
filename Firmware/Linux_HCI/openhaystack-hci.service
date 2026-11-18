@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenHaystack Find My beacon (Linux HCI advertiser)
+Documentation=https://github.com/Vakrehus/openhaystack/tree/main/Firmware/Linux_HCI
+After=bluetooth.service
+Wants=bluetooth.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/openhaystack/advertisement-key.env
+ExecStart=/usr/bin/python3 /opt/openhaystack/Firmware/Linux_HCI/HCI.py --key ${ADVERTISEMENT_KEY}
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
