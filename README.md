@@ -113,7 +113,7 @@ Feel free to port OpenHaystack to other devices that support Bluetooth Low Energ
 |----------|-----------|:--------------:|---------|
 | [Nordic nRF51](Firmware/Microbit_v1) | BBC micro:bit v1 | ✓ | Only supports nRF51822 at this time (see issue #6). |
 | [Espressif ESP32](Firmware/ESP32) | SP32-WROOM, ESP32-WROVER | ✓ | Deployment can take up to 3 minutes. Requires Python 3. Thanks **@fhessel**. |
-| [Linux HCI](Firmware/Linux_HCI) | Raspberry Pi 4 w/ Raspbian | | Should support any Linux machine. |
+| [Linux HCI](Firmware/Linux_HCI) | Raspberry Pi 4 w/ Raspbian, Debian 12/13 (incl. Proxmox LXC) | | Any Linux machine with a BLE adapter; no BlueZ tools required (raw HCI socket). |
 
 ![Setup](Resources/Setup.jpg)
 
